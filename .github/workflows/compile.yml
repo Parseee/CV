@@ -1,0 +1,9 @@
+name: Render CV.pdf
+on: push
+jobs:
+  render-paper:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: typst-community/setup-typst@v5
+      - run: typst compile CV.typ CV-mts.pdf
