@@ -15,11 +15,11 @@ jobs:
     steps:
       - uses: actions/checkout@v6
       - uses: typst-community/setup-typst@v5
-      - run: typst compile CV.typ CV-mts.pdf
+      - run: typst compile CV.typ babakov.pdf
       - name: Upload to Release
         uses: softprops/action-gh-release@v2
         with:
           tag_name: latest
-          files: CV-mts.pdf
+          files: babakov.pdf
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
